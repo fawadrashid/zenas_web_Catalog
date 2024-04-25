@@ -8,7 +8,8 @@ from snowflake.snowpark.functions import col
 st.title("Zena's Amazing Athleisure Catalog")
 
 option = st.selectbox(
-    'Pick a sweatsuit color or style'
+    'Pick a sweatsuit color or style',
+    ('1')
 )
 st.write ('You have selected', option)
 st.stop()

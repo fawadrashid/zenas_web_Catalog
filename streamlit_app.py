@@ -8,14 +8,16 @@ from snowflake.snowpark.functions import col
 st.title("Zena's Amazing Athleisure Catalog")
 
 option = st.selectbox(
-    'Pick a sweatsuit color or style',
+    'Pick a sweatsuit color or style:',
     ('1')
 )
 st.write ('You have selected', option)
-st.stop()
 
-name_on_order = st.text_input('Name on Smoothie:')
-st.write('The name on your Smoothie will bea:', name_on_order )
+cnx = st.connection("snowflake")
+session = cnx.session()
+my_dataframe = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website").select(col('COLOR_OR_STYLE'))
+
+st.stop()
 
 cnx = st.connection("snowflake")
 session = cnx.session()

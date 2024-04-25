@@ -19,7 +19,7 @@ sweatshirts_selected_option = st.selectbox(
     color_list)
 
 selected_sweatshirt_product = pd_catalog[pd_catalog["COLOR_OR_STYLE"] == sweatshirts_selected_option]
-st.write(type(selected_sweatshirt_product))
+st.write(type(st.dataframe(selected_sweatshirt_product)))
 #st.stop()
 #st.write ('You have selected', selected_sweatshirt_product ["DIRECT_URL"])
 

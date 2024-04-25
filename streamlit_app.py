@@ -27,7 +27,7 @@ selected_sweatshirt_product = pd_catalog.loc[pd_catalog["COLOR_OR_STYLE"] == swe
 
 
 #st.write(selected_sweatshirt_product["DIRECT_URL"].to_string(index=False))
-#sweatshirt_image_url = selected_sweatshirt_product["DIRECT_URL"]
+sweatshirt_image_url = selected_sweatshirt_product["DIRECT_URL"]
 #st.write(type(sweatshirt_image_url))
 #st.write(sweatshirt_image_url.index[0])
 st.write(selected_sweatshirt_product)

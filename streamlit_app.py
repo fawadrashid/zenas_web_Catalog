@@ -7,16 +7,15 @@ from snowflake.snowpark.functions import col
 # Write directly to the app
 st.title("Zena's Amazing Athleisure Catalog")
 
-option = st.selectbox(
-    'Pick a sweatsuit color or style:',
-    ('1')
-)
-st.write ('You have selected', option)
-
 cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website").select(col('COLOR_OR_STYLE'))
-
+pd_df=my_dataframe.to_pandas()
+sweatshirts_list = st.selectbox(
+    'Pick a sweatsuit color or style:',
+    my_dataframe
+)
+st.write ('You have selected', option)
 st.stop()
 
 cnx = st.connection("snowflake")

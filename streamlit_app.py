@@ -16,10 +16,10 @@ sweatshirts_selected_option = st.selectbox(
     my_dataframe.select(col('COLOR_OR_STYLE'))
 )
 #st.write ('You have selected', sweatshirts_selected_option )
-st.stop()
+
 if sweatshirts_selected_option:
     st.write(my_dataframe.select(col('PRICE')));   
-
+    st.stop()
     for color_style_chooen in sweatshirts_selected_option:
         ingredients_string += fruit_chosen + ' '
 

@@ -13,7 +13,7 @@ my_dataframe = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website")
 pd_df=my_dataframe.to_pandas()
 sweatshirts_selected_option = st.selectbox(
     'Pick a sweatsuit color or style:',
-    my_dataframe.select(col('COLOR_OR_STYLE')
+    my_dataframe.select(col('COLOR_OR_STYLE'))
 )
 #st.write ('You have selected', sweatshirts_selected_option )
 st.stop()

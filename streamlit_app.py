@@ -29,6 +29,7 @@ st.write(selected_sweatshirt_product["DIRECT_URL"])
 #st.write(selected_sweatshirt_product["DIRECT_URL"].to_string(index=False))
 sweatshirt_image_url = selected_sweatshirt_product["DIRECT_URL"]
 #st.write(type(sweatshirt_image_url))
-st.write(sweatshirt_image_url.index[0])
+#st.write(sweatshirt_image_url.index[0])
 st.image(sweatshirt_image_url[sweatshirt_image_url.index[0]],width=400 )
+st.write("Our warn comfortable, " + selected_sweatshirt_product["COLOR_OR_STYLE"] + " sweatshirt!"
 

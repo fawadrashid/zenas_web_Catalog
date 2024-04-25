@@ -30,5 +30,5 @@ st.write(selected_sweatshirt_product["DIRECT_URL"])
 sweatshirt_image_url = selected_sweatshirt_product["DIRECT_URL"]
 #st.write(type(sweatshirt_image_url))
 st.write(sweatshirt_image_url.index[0])
-st.image(sweatshirt_image_url[sweatshirt_image_url.index],width=400 )
+st.image(sweatshirt_image_url[sweatshirt_image_url.index[0]],width=400 )
 

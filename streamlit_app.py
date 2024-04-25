@@ -33,7 +33,7 @@ sweatshirt_image_url = selected_sweatshirt_product["DIRECT_URL"]
 st.write(selected_sweatshirt_product["COLOR_OR_STYLE"].values[0])
 st.image(sweatshirt_image_url[sweatshirt_image_url.index[0]],width=400, caption="Our warn comfortable, " + selected_sweatshirt_product["COLOR_OR_STYLE"].values[0] + " sweatshirt!" )
 
-st.write("Price: " + selected_sweatshirt_product["PRICE"].values[0] )
+st.write("Price: " + str(selected_sweatshirt_product["PRICE"].values[0] ))
 st.write("Sizes Available: " + selected_sweatshirt_product["SIZE_LIST"].values[0])
 st.write(selected_sweatshirt_product["UPSELL_PRODUCT_DESC"].values[0])
          

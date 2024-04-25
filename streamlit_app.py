@@ -23,8 +23,9 @@ st.write(selected_sweatshirt_product)
 st.stop()
 #st.write ('You have selected', sweatshirts_selected_option )
 
-if sweatshirts_selected_option:
-    st.write(my_dataframe.select(col('PRICE')));   
+if selected_sweatshirt_product:
+    st.image(selected_sweatshirt_product["DIRECT_URL"], caption=selected_sweatshirt_product["COLOR_OR_STYLE"])
+    
     st.stop()
     for color_style_chooen in sweatshirts_selected_option:
         ingredients_string += fruit_chosen + ' '

@@ -21,7 +21,7 @@ sweatshirts_selected_option = st.selectbox(
 selected_sweatshirt_product = pd_catalog[pd_catalog["COLOR_OR_STYLE"] == sweatshirts_selected_option]
 #st.write(selected_sweatshirt_product)
 #st.stop()
-#st.write ('You have selected', sweatshirts_selected_option )
+st.write ('You have selected', selected_sweatshirt_product ["DIRECT_URL"])
 
 if selected_sweatshirt_product:
     st.image(selected_sweatshirt_product["DIRECT_URL"], caption=selected_sweatshirt_product["COLOR_OR_STYLE"])

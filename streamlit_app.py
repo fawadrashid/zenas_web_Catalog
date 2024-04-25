@@ -23,12 +23,10 @@ st.write(selected_sweatshirt_product)
 #st.stop()
 #st.write ('You have selected', selected_sweatshirt_product ["DIRECT_URL"])
 
-if selected_sweatshirt_product.any():
-    st.write(selected_sweatshirt_product["DIRECT_URL"])
-    st.stop()
-    st.image(selected_sweatshirt_product["DIRECT_URL"])
-    
-    st.stop()
+
+st.write(selected_sweatshirt_product["DIRECT_URL"])
+st.image(selected_sweatshirt_product["DIRECT_URL"])
+st.stop()
     for color_style_chooen in sweatshirts_selected_option:
         ingredients_string += fruit_chosen + ' '
 

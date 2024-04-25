@@ -18,7 +18,7 @@ sweatshirts_selected_option = st.selectbox(
     'Pick a sweatsuit color or style:',
     color_list)
 
-selected_sweatshirt_product = pd_catalog.loc[pd_catalog["COLOR_OR_STYLE"] == sweatshirts_selected_option].index[0]
+selected_sweatshirt_product = pd_catalog.loc[pd_catalog["COLOR_OR_STYLE"] == sweatshirts_selected_option]
 #st.write(type(st.dataframe(selected_sweatshirt_product)))
 #st.write(type(selected_sweatshirt_product))
 st.write(selected_sweatshirt_product["DIRECT_URL"])
@@ -30,6 +30,6 @@ st.write(selected_sweatshirt_product["DIRECT_URL"])
 sweatshirt_image_url = selected_sweatshirt_product["DIRECT_URL"]
 #st.write(type(sweatshirt_image_url))
 #st.write(sweatshirt_image_url.index[0])
-st.image(sweatshirt_image_url[sweatshirt_image_url],width=400, caption="Our warn comfortable, " + selected_sweatshirt_product["COLOR_OR_STYLE"] + " sweatshirt!" )
+st.image(sweatshirt_image_url[sweatshirt_image_url.index[0]],width=400, caption="Our warn comfortable, " + selected_sweatshirt_product["COLOR_OR_STYLE"].index[0] + " sweatshirt!" )
 
 

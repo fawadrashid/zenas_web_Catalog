@@ -35,5 +35,5 @@ st.image(sweatshirt_image_url[sweatshirt_image_url.index[0]],width=400, caption=
 
 st.write("Price: " + selected_sweatshirt_product["PRICE"].values[0] )
 st.write("Sizes Available: " + selected_sweatshirt_product["SIZE_LIST"].values[0])
-st.write("Bonus: " + selected_sweatshirt_product["UPSELL_PRODUCT_DESC"].values[0]
+st.write(selected_sweatshirt_product["UPSELL_PRODUCT_DESC"].values[0])
          

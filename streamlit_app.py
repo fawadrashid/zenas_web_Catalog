@@ -23,7 +23,9 @@ selected_sweatshirt_product = pd_catalog[pd_catalog["COLOR_OR_STYLE"] == sweatsh
 #st.stop()
 #st.write ('You have selected', selected_sweatshirt_product ["DIRECT_URL"])
 
-if  not selected_sweatshirt_product.empty:
+if selected_sweatshirt_product:
+    st.write(selected_sweatshirt_product["DIRECT_URL"])
+    st.stop()
     st.image(selected_sweatshirt_product["DIRECT_URL"])
     
     st.stop()

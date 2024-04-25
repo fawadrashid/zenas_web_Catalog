@@ -11,13 +11,13 @@ cnx = st.connection("snowflake")
 session = cnx.session()
 my_catalog = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website")
 pd_catalog= my_catalog.to_pandas()
-st.write (pd_catalog["COLOR_OR_STYLE"])
-st.stop()
-color_list = pd_catalog.select("COLOR_OR_STYLE")
+
+color_list = pd_catalog["COLOR_OR_STYLE"]
+
 sweatshirts_selected_option = st.selectbox(
     'Pick a sweatsuit color or style:',
     color_list)
-
+st.stop()
 #st.write ('You have selected', sweatshirts_selected_option )
 
 if sweatshirts_selected_option:

@@ -15,7 +15,7 @@ color_list = pd_catalog[0].values.tolist()
 sweatshirts_selected_option = st.selectbox(
     'Pick a sweatsuit color or style:',
     color_list)
-)
+
 #st.write ('You have selected', sweatshirts_selected_option )
 
 if sweatshirts_selected_option:

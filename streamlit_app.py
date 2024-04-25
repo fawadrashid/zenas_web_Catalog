@@ -6,9 +6,9 @@ from snowflake.snowpark.functions import col
 
 # Write directly to the app
 st.title("Zena's Amazing Athleisure Catalog")
-st.write("Pick a sweatsuit color or style")
+
 option = st.selectbox(
-    'Hello'
+    'Pick a sweatsuit color or style'
 )
 st.write ('You have selected', option)
 st.stop()

@@ -9,11 +9,12 @@ st.title("Zena's Amazing Athleisure Catalog")
 
 cnx = st.connection("snowflake")
 session = cnx.session()
-my_dataframe = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website")
-pd_df=my_dataframe.to_pandas()
+my_catalog = session.table("ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website")
+pd_catalog= my_catalog.to_pandas()
+color_list = pd_catalog[0].values.tolist()
 sweatshirts_selected_option = st.selectbox(
     'Pick a sweatsuit color or style:',
-    my_dataframe.select(col('COLOR_OR_STYLE'))
+    color_list)
 )
 #st.write ('You have selected', sweatshirts_selected_option )
 

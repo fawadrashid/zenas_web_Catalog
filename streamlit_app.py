@@ -6,7 +6,11 @@ from snowflake.snowpark.functions import col
 
 # Write directly to the app
 st.title("Zena's Amazing Athleisure Catalog")
-st.write("Piack a sweetsuit color or style")
+st.write("Pick a sweatsuit color or style")
+option = st.selectbox(
+    'Hello'
+)
+st.write ('You have selected', option)
 st.stop()
 
 name_on_order = st.text_input('Name on Smoothie:')

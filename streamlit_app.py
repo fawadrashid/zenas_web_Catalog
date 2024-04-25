@@ -25,5 +25,5 @@ st.write(selected_sweatshirt_product)
 
 
 st.write(selected_sweatshirt_product["DIRECT_URL"][0])
-st.image(selected_sweatshirt_product["DIRECT_URL"].to_string(), output_format="PNG")
+#st.image(selected_sweatshirt_product["DIRECT_URL"].to_string(), output_format="PNG")
 
